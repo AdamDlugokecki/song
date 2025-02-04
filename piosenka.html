@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zgadnij Piosenkę</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Zgadnij Piosenkę</h1>
+        <button id="start-quiz" onclick="startQuiz()">Start</button>
+        <p id="song-count" class="hidden">Piosenka: 1</p>
+        <audio id="audioPlayer" class="hidden">
+            <source id="audioSource" src="" type="audio/mpeg">
+        </audio>
+        <div class="audio-controls hidden" id="audio-controls">
+            <button onclick="playSnippet(1)">🔊 1s</button>
+            <button onclick="playSnippet(5)">🔊 5s</button>
+            <button onclick="playSnippet(10)">🔊 10s</button>
+        </div>
+        <input type="text" id="title" placeholder="Tytuł" class="hidden" list="title-list">
+        <datalist id="title-list"></datalist>
+        <input type="text" id="artist" placeholder="Wykonawca" class="hidden" list="artist-list">
+        <datalist id="artist-list"></datalist>
+        <button id="check-answer" onclick="checkAnswer()" class="hidden">Sprawdź</button>
+        <p id="message"></p>
+        <button id="youtube-button" class="hidden" onclick="openYouTube()">Otwórz w YouTube</button>
+        <button id="next-song" class="hidden" onclick="nextSong()">Następna piosenka</button>
+        <p id="summary" class="hidden"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
